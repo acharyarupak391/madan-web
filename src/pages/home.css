@@ -18,35 +18,40 @@
   display: flex;
 }
 .left-container {
-  flex: 1;
+  /* flex: 1; */
   font-family: "Andada Pro";
   font-style: normal;
   font-weight: 400;
-  font-size: 86px;
+  font-size: 4em;
   color: #ffffff;
-  margin-left: 100px;
-  margin-top: 170px;
-  width: 200px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 100px;
+  /* margin-top: 170px; */
+  /* width: 200px; */
   align-items: center;
   justify-content: center;
 }
+
 .text-desc {
   font-size: 24px;
   font-family: "Jost", sans-serif;
   margin-top: 50px;
   font-weight: 400;
-  width: 80%;
+  width: 100%;
   color: #cacaca;
 }
+
 form {
   margin-top: 50px;
   flex: 1;
   flex-direction: column;
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 input {
-  width: 69%;
+  width: calc(100% - 30px);
   height: 50px;
   border: none;
   margin: 10px 0px;
@@ -61,9 +66,11 @@ input {
   color: #c4c4c4;
   font-size: 20px;
 }
+
 button {
+  margin-top: 20px;
   border: none;
-  width: 73%;
+  width: 100%;
   padding: 15px;
   cursor: pointer;
   background: linear-gradient(251.82deg, #f3e6d5 -24.9%, #6055ce 80.01%);
@@ -73,6 +80,7 @@ button {
   color: #ffffff;
   font-size: 20px;
 }
+
 .top-bar {
   display: none;
 }
@@ -106,7 +114,7 @@ button {
     width: 300px;
   }
   input {
-    width: 300px;
+    /* width: 300px; */
   }
   .right-container {
     display: none;
@@ -134,5 +142,75 @@ button {
   }
   .logo-image {
     display: none;
+  }
+}
+
+.flex-container {
+  background-color: #0f0f0f;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: flex-start;
+  align-items: stretch;
+
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .flex-container {
+    flex-direction: row-reverse;
+  }
+
+  .left-container {
+    padding-bottom: 0px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .left-container {
+    font-size: 5em;
+    padding-right: 0px;
+  }
+
+  .text-desc {
+    width: 80%;
+  }
+
+  input {
+    width: 69%;
+  }
+
+  button {
+    width: 73%;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .left-container {
+    font-size: 6em;
+  }
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-container > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* min-width: 400px; */
+}
+
+@media screen and (min-width: 1200px) {
+  .img-container > img {
+    min-width: 500px;
   }
 }

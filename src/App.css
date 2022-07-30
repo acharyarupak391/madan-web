@@ -3,6 +3,14 @@
 .App {
   background-color: #0F0F0F;
   font-family: 'Andada Pro', serif;
+  min-height: 100vh;
+  padding-bottom: 0px;
+}
+
+@media screen and (min-width: 1260px) {
+  .App {
+    padding-bottom: 150px;
+  }
 }
 
 
